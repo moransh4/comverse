@@ -1461,16 +1461,30 @@ footer .blog p{
 
 
     .mobile-menu{
-        display: none;
+        /*display: inline;*/
+        max-height: 0;
+        -webkit-transition: max-height 0.8s;
+        -moz-transition: max-height 0.8s;
+        transition: max-height 0.8s;
         cursor: pointer;
-        position: relative;
+        position: absolute;
         border: 1px solid lightgrey;
         border-radius: 5px;
-        width: 48rem;
+        width: 100%;
+
+        /*width: 48rem;*/
         top: 0;
         left: 0.5rem;
         padding: -0.5rem;
         background: url("../img/hamburger-icon.png") center no-repeat;
+
+
+    }
+
+    .hamburger:focus   .mobile-menu{
+        display: block; !important;
+        max-height: 400px;
+        z-index: 9;
 
     }
 
