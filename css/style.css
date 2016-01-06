@@ -1139,6 +1139,7 @@ footer .blog p{
     /*-----------------------header------------------------------*/
 
     .container {
+
         max-width: 48rem;
         font-size: 0.79rem;
     }
@@ -1433,7 +1434,8 @@ footer .blog p{
         display: none;
     }
 
-    .mobile-search{
+
+    .mobile-search {
         position: absolute;
         border-radius: 5px;
         cursor: pointer;
@@ -1445,6 +1447,9 @@ footer .blog p{
         outline:none !important ;
         background: url("../img/searchBtnMobile.png")center no-repeat lightgray ;
     }
+
+
+    /*----------------------------------mobile-menu-----------------------------------*/
 
     .hamburger{
         display: block;
@@ -1459,34 +1464,61 @@ footer .blog p{
         background: url("../img/hamburger-icon.png")center no-repeat lightgray;
     }
 
-
     .mobile-menu{
-        /*display: inline;*/
-        max-height: 0;
-        -webkit-transition: max-height 0.8s;
-        -moz-transition: max-height 0.8s;
-        transition: max-height 0.8s;
-        cursor: pointer;
-        position: absolute;
-        border: 1px solid lightgrey;
-        border-radius: 5px;
+        display: block !important;
+    }
+
+    .list{
+        top: 4rem;
+        position: fixed;
+        z-index: 3;
         width: 100%;
-
-        /*width: 48rem;*/
-        top: 0;
-        left: 0.5rem;
-        padding: -0.5rem;
-        background: url("../img/hamburger-icon.png") center no-repeat;
-
-
     }
 
-    .hamburger:focus   .mobile-menu{
-        display: block; !important;
-        max-height: 400px;
-        z-index: 9;
-
+    .mobile-menu-list{
+        background-color: #fff;
+        width: 100%;
+        border-top: 1px solid #dbdbdb;
+        height: 30px;
+        display: block;
     }
+
+    .mobile-menu-list .title{
+        font-size: 1rem;
+        display: block;
+        padding: 0 10px;
+        text-transform: uppercase;
+        height: 100%;
+        margin: 8px;
+        color: #585951;
+    }
+
+    .mobile-menu-list .title:hover{
+        color: #2980b9;
+    }
+
+    .mobile-menu-list .title:before{
+        display: inline-block;
+        margin-right: 1rem;
+        content: url("../img/navCollapseArrowRight.png") ;
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+        transform: rotate(-90deg);
+    }
+
+    .mobile-menu .list {
+        max-height: 0;
+        transition: max-height 0.15s ;
+        overflow: hidden;
+        background: #aeaeae;
+    }
+
+    .mobile-menu:hover  .list {
+        max-height: 500px;
+        transition: max-height 0.25s ;
+    }
+
+
 
     /*-----------------------------section1------------------------*/
 
