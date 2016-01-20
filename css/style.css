@@ -279,7 +279,7 @@ select{
 
 .fixed-bg{
     background-size: cover;
-    background: no-repeat fixed center center;
+    background: no-repeat fixed center;
 }
 
 .first-sec{
